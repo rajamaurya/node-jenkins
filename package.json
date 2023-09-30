@@ -1,0 +1,26 @@
+{
+  "name": "node-jenkins",
+  "version": "1.0.0",
+  "description": "node with jenkins",
+  "main": "server.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rajamaurya/node-jenkins.git"
+  },
+  "keywords": [
+    "node",
+    "jenkins"
+  ],
+  "author": "Raja Kirshn Mourya",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rajamaurya/node-jenkins/issues"
+  },
+  "homepage": "https://github.com/rajamaurya/node-jenkins#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
