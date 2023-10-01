@@ -5,7 +5,6 @@ pipeline{
             steps{
                 echo "building the node application"
                 sh "npm install"
-                sh "node server.js"
             }
         }
         stage("test"){
