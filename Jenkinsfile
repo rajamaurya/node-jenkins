@@ -9,7 +9,7 @@ pipeline{
                 echo "building the node application"
                 sh "npm install"
                 sh "npm version"
-                sh "npm config ls"
+                echo "<--------------------in process----------------------------->"
             }
         }
         stage("test"){
@@ -21,6 +21,17 @@ pipeline{
             steps{
                 echo "deploying the app"
             }
+        }
+    }
+    post{
+        always{
+            echo "-------> Check the issues in case of failures. <------------"
+        }
+        failure{
+            echo "----------> failures occured. check the configuration and script to avoid the same. <-------"
+        }
+        success{
+            echo "---------> Successfully executed the pipeline. Congratulations!!. <--------"
         }
     }
 }
