@@ -1,7 +1,7 @@
 pipeline{
     agent any
     tools{
-        NodeJS '20.8.0'
+        nodejs 'NodeJS'
     }
     stages{
         stage("build"){
@@ -9,6 +9,7 @@ pipeline{
                 echo "building the node application"
                 sh "npm install"
                 sh "npm version"
+                sh "npm config ls"
             }
         }
         stage("test"){
