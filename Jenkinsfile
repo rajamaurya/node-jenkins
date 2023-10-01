@@ -1,10 +1,14 @@
 pipeline{
     agent any
+    tools{
+        nodejs 20.8.0
+    }
     stages{
         stage("build"){
             steps{
                 echo "building the node application"
-                npm install
+                sh "npm install"
+                sh "npm version"
             }
         }
         stage("test"){
