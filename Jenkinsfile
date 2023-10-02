@@ -7,8 +7,8 @@ pipeline{
         stage("build"){
             steps{
                 echo "building the node application"
-                npm install
-                npm version
+                sh 'npm install'
+                sh 'npm version'
                 echo "<--------------------in process----------------------------->"
             }
         }
