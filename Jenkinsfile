@@ -7,8 +7,8 @@ pipeline{
         stage("build"){
             steps{
                 echo "building the node application"
-                sh 'npm install'
-                sh 'npm version'
+                bat 'npm install'
+                bat 'npm version'
                 echo "<--------------------in process----------------------------->"
             }
         }
