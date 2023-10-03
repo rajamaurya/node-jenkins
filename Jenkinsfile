@@ -10,7 +10,7 @@ pipeline{
                 bat 'npm install'
                 bat 'npm version'
                 echo "<--------------------in process----------------------------->"
-                bat 'npm build'
+                bat 'npm run build'
                 bat 'node server.js'
             }
         }
